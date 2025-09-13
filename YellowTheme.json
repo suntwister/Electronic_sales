@@ -1,0 +1,55 @@
+{
+  "name": "Yellow White Black Theme",
+  "dataColors": [
+    "#FFD700", "#FFB300", "#FFA000", "#F57C00",
+    "#212121", "#616161", "#9E9E9E", "#FFFFFF"
+  ],
+  "background": "#FFFFFF",
+  "foreground": "#212121",
+  "tableAccent": "#FFD700",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "title": [
+          { "fontColor": { "solid": { "color": "#212121" } }, "background": "transparent", "alignment": "center" }
+        ],
+        "labels": [
+          { "color": { "solid": { "color": "#212121" } }, "fontSize": 12 }
+        ]
+      }
+    },
+    "matrix": {
+      "*": {
+        "values": [
+          {
+            "fontColor": { "solid": { "color": "#212121" } },
+            "backgroundColor": { "solid": { "color": "#FFFFFF" } }
+          }
+        ],
+        "grid": [
+          { "outlineColor": { "solid": { "color": "#FFD700" } }, "outlineWeight": 1 }
+        ]
+      }
+    }
+  },
+  "conditionalFormatting": {
+    "matrix": {
+      "values": {
+        "backgroundColor": {
+          "rules": [
+            { "operator": "LessThan", "value": 100, "color": "#FFEBEE" },
+            { "operator": "Between", "minValue": 100, "maxValue": 500, "color": "#FFF8E1" },
+            { "operator": "GreaterThan", "value": 500, "color": "#E8F5E9" }
+          ]
+        },
+        "fontColor": {
+          "rules": [
+            { "operator": "LessThan", "value": 100, "color": "#C62828" },
+            { "operator": "Between", "minValue": 100, "maxValue": 500, "color": "#F57C00" },
+            { "operator": "GreaterThan", "value": 500, "color": "#2E7D32" }
+          ]
+        }
+      }
+    }
+  }
+}
